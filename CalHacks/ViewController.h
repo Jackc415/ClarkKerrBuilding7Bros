@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-
-@interface ViewController : UIViewController <CLLocationManagerDelegate>
+#import <MapKit/MapKit.h>
+#import <Parse/Parse.h>
+#import <ParseFacebookUtilsV4/ParseFacebookUtilsV4.h>
+@interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
 
 @end

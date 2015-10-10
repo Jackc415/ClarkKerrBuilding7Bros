@@ -36,7 +36,7 @@
     
     [self performSelector:@selector(checkLocation) withObject:nil afterDelay:.5];
     
-    
+    NSLog(@"Hey this is a change.");
 }
 
 

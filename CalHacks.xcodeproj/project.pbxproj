@@ -15,6 +15,7 @@
 		5C92E6081BC8D56900639F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C92E6061BC8D56900639F10 /* LaunchScreen.storyboard */; };
 		5C92E6131BC8D56900639F10 /* CalHacksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C92E6121BC8D56900639F10 /* CalHacksTests.m */; };
 		5C92E61E1BC8D56900639F10 /* CalHacksUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C92E61D1BC8D56900639F10 /* CalHacksUITests.m */; };
+		5C92E62C1BC8DE6A00639F10 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C92E62B1BC8DE6A00639F10 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5C92E6191BC8D56900639F10 /* CalHacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalHacksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C92E61D1BC8D56900639F10 /* CalHacksUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalHacksUITests.m; sourceTree = "<group>"; };
 		5C92E61F1BC8D56900639F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C92E62B1BC8DE6A00639F10 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C92E62C1BC8DE6A00639F10 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		5C92E5EC1BC8D56800639F10 = {
 			isa = PBXGroup;
 			children = (
+				5C92E62B1BC8DE6A00639F10 /* MapKit.framework */,
 				5C92E5F71BC8D56900639F10 /* CalHacks */,
 				5C92E6111BC8D56900639F10 /* CalHacksTests */,
 				5C92E61C1BC8D56900639F10 /* CalHacksUITests */,
@@ -207,6 +211,11 @@
 				TargetAttributes = {
 					5C92E5F41BC8D56900639F10 = {
 						CreatedOnToolsVersion = 7.0.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					5C92E60D1BC8D56900639F10 = {
 						CreatedOnToolsVersion = 7.0.1;

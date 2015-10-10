@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2S-Ou-G64">
+                                <rect key="frame" x="40" y="158" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="0GC-Vb-are"/>
+                                    <constraint firstAttribute="width" constant="240" id="f9Z-VV-wVu"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeP-vE-e5U">
+                                <rect key="frame" x="133" y="447" width="54" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="1RZ-Bt-hZd"/>
+                                    <constraint firstAttribute="height" constant="21" id="x7R-L1-uET"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TDi-yd-539">
+                                <rect key="frame" x="101" y="518" width="118" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="RzI-Nx-Isb"/>
+                                    <constraint firstAttribute="height" constant="30" id="gcb-Fo-hG5"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,000 feet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeV-XN-n1E">
+                                <rect key="frame" x="0.0" y="476" width="320" height="34"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="Nh0-j2-MAN"/>
+                                    <constraint firstAttribute="height" constant="34" id="mg7-AQ-fI3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nh0-j2-MAN"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Up!?!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhC-71-m4Y">
+                                <rect key="frame" x="56" y="12" width="209" height="64"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="kXp-sd-YX0"/>
+                                    <constraint firstAttribute="height" constant="64" id="yCF-Vb-iru"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KeV-XN-n1E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1H9-zm-OHg"/>
+                            <constraint firstItem="LeP-vE-e5U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GII-Me-CLm"/>
+                            <constraint firstItem="TDi-yd-539" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HpW-B4-Yx5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TDi-yd-539" secondAttribute="bottom" constant="20" id="K1a-kf-mqy"/>
+                            <constraint firstItem="KeV-XN-n1E" firstAttribute="centerX" secondItem="LeP-vE-e5U" secondAttribute="centerX" id="N0C-ya-vuW"/>
+                            <constraint firstItem="k2S-Ou-G64" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q5j-Qw-i0M"/>
+                            <constraint firstItem="LeP-vE-e5U" firstAttribute="top" secondItem="k2S-Ou-G64" secondAttribute="bottom" constant="49" id="cCs-rd-VqB"/>
+                            <constraint firstItem="KeV-XN-n1E" firstAttribute="top" secondItem="LeP-vE-e5U" secondAttribute="bottom" constant="8" symbolic="YES" id="kt0-5X-ESv"/>
+                            <constraint firstItem="mhC-71-m4Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rJY-fi-r95"/>
+                            <constraint firstItem="KeV-XN-n1E" firstAttribute="centerX" secondItem="mhC-71-m4Y" secondAttribute="centerX" id="raE-oh-Z4z"/>
+                            <constraint firstItem="TDi-yd-539" firstAttribute="top" secondItem="KeV-XN-n1E" secondAttribute="bottom" constant="8" symbolic="YES" id="ub4-pk-KSm"/>
+                            <constraint firstItem="KeV-XN-n1E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xmS-yg-Nrw"/>
+                            <constraint firstItem="mhC-71-m4Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="12" id="zlV-qn-wpM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xmS-yg-Nrw"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="k2S-Ou-G64" id="6KX-DJ-0ar"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="402" y="385"/>
         </scene>
     </scenes>
 </document>
